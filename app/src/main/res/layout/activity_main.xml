@@ -8,8 +8,9 @@
     tools:context="com.example.zy.echacks2016.MainActivity">
 
     <ListView
-        android:layout_width="wrap_content"
-        android:layout_height="497dp">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/city_list_view">
 
     </ListView>
 </FrameLayout>
