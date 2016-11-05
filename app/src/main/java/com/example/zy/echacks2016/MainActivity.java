@@ -17,6 +17,7 @@ public class MainActivity extends Activity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        cityList = new ArrayList<>();
         cityList.add("PeterBourogoh");
         cityList.add("Toronto");
         cityList.add("Waterpo");
