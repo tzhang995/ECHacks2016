@@ -21,7 +21,7 @@ public class MainActivity extends Activity{
         cityList.add("PeterBourogoh");
         cityList.add("Toronto");
         cityList.add("Waterpo");
-        mAdapter = new ArrayAdapter<String>(this,R.layout.city_listitem,cityList);
+        mAdapter = new ArrayAdapter<String>(this, R.layout.city_listitem, cityList);
         ListView listView = (ListView) findViewById(R.id.city_list_view);
         listView.setAdapter(mAdapter);
     }
