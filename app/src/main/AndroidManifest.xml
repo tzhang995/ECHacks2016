@@ -16,6 +16,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".OrderBusTicketActivity"></activity>
+        
+        <activity android:name=".AcceptedPaymentActivity"></activity>
     </application>
 
 </manifest>
