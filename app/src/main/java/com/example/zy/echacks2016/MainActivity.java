@@ -50,6 +50,7 @@ public class MainActivity extends Activity{
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent intent = new Intent(view.getContext(), OrderBusTicketActivity.class);
                 intent.putExtra(Constants.CITY_NAME,cityList.get(i));
+                intent.putExtra(Constants.CITY_INDEX, i);
                 startActivity(intent);
             }
         });
