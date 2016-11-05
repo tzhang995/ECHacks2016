@@ -19,8 +19,22 @@ import android.widget.TextView;
 public class OrderBusTicketActivity extends Activity {
     public ReceiveConfirmBroadcastReceiver receiver;
 
-    public int[] mTransitLogo = {R.drawable.calgary,R.drawable.calgary,R.drawable.calgary,R.drawable.calgary,R.drawable.calgary,R.drawable.calgary,R.drawable.calgary,R.drawable.calgary,R.drawable.calgary,R.drawable.calgary,R.drawable.calgary, R.drawable.chicago, R.drawable.peterborough,
-                                    R.drawable.sf, R.drawable.ttc, R.drawable.nyc, R.drawable.vancouver,
+    public int[] mTransitLogo = {R.drawable.calgary,
+                                    R.drawable.calgary,
+                                    R.drawable.chicago,
+                                    R.drawable.calgary,
+                                    R.drawable.calgary,
+                                    R.drawable.peterborough,
+                                    R.drawable.calgary,
+                                    R.drawable.calgary,
+                                    R.drawable.calgary,
+                                    R.drawable.calgary,
+                                    R.drawable.calgary,
+                                    R.drawable.sf,
+                                    R.drawable.ttc,
+                                    R.drawable.nyc,
+                                    R.drawable.vancouver,
+                                    R.drawable.calgary,
                                     R.drawable.grt};
 
     @Override
