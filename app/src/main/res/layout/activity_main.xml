@@ -11,22 +11,32 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Some Title"
-        android:textStyle="bold"
-        android:textSize="55dp"
-        android:textColor="#151515"
-        android:paddingBottom="55dp"
-        android:textAlignment="center"/>
+        android:text="Electric Ticket"
+        android:background="#BCDEF8"
+        android:textSize="45dp"
+        android:fontFamily="roboto-light-italic"
+        android:textColor="#283C46"
+        android:paddingBottom="15dp"
+        android:textAlignment="center"
+        android:shadowColor="#283C46"
+        android:shadowDx="2.5"
+        android:shadowDy="2.3"
+        android:shadowRadius="1.6"
+        style="?android:attr/listSeparatorTextViewStyle"
+        android:paddingTop="5dip"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/connect_help"
+        />
     <View
         android:layout_width="match_parent"
-        android:layout_height="2px"
-        android:background="@android:color/black"/>
+        android:layout_height="3px"
+        android:background="#E6E6E6"/>
 
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:divider="#403F3F"
-        android:dividerHeight="2px"
+        android:divider="#E6E6E6"
+        android:dividerHeight="3px"
         android:id="@+id/city_list_view">
     </ListView>
 

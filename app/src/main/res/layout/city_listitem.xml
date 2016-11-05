@@ -6,14 +6,14 @@
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
     android:id="@+id/text1"
-    android:padding="50px"
+    android:padding="30px"
     android:text="Hello"
-    android:textSize="20dp"
-    android:textColor="#F9FCF9"
-    android:shadowColor="#1B1919"
-    android:shadowDx="2.5"
-    android:shadowDy="2.3"
-    android:shadowRadius="2.6"
+    android:textSize="30dp"
+    android:textColor="#188e44"
+    android:shadowColor="#FFFFFF"
+    android:shadowDx="1.5"
+    android:shadowDy="1.3"
+    android:shadowRadius="1.6"
 
 />
 

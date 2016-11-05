@@ -9,7 +9,7 @@
         android:layout_height="match_parent"
         android:text="Hello"
         android:textStyle="bold"
-        android:textColor="#D7F9F1"
+        android:textColor="#EBEBEB"
         style="@style/Test"/>
     <LinearLayout
         android:layout_width="match_parent"
