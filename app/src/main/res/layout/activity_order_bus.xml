@@ -1,24 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#7A8B99">
     <TextView
         android:id="@+id/Title_Name"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Hello"/>
-    <Button
-        android:layout_width="wrap_content"
+        android:text="Hello"
+        android:textStyle="bold"
+        android:textColor="#D7F9F1"
+        style="@style/Test"/>
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:text="Buy Day Pass"
-        android:id="@+id/day_pass"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:text="Buy Group Pass"
-        android:id="@+id/group_pass"/>
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="300dp"
+        >
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Buy Day Pass"
+            android:textSize="25dp"
+            android:textColor="#FFFFFF"
+            android:background="#72BDA3"
+            android:width="250dp"
+            android:shadowColor="#1B1919"
+            android:shadowDx="1.5"
+            android:shadowDy="1.3"
+            android:shadowRadius="1.6"
+            android:layout_margin="10dp"
+            android:id="@+id/day_pass"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:width="250dp"
+            android:text="Buy Group Pass"
+            android:textSize="25dp"
+            android:textColor="#FFFFFF"
+            android:background="#72BDA3"
+            android:shadowColor="#1B1919"
+            android:shadowDx="1.5"
+            android:shadowDy="1.3"
+            android:shadowRadius="1.6"
+            android:layout_margin="10dp"
+            android:id="@+id/group_pass"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/db"/>
+    </LinearLayout>
 </RelativeLayout>

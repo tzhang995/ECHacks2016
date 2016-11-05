@@ -20,7 +20,6 @@ public class OrderBusTicketActivity extends Activity {
 
         TextView title = (TextView) findViewById(R.id.Title_Name);
         title.setText(intent.getStringExtra(Constants.CITY_NAME));
-
         Button singlePass = (Button) findViewById(R.id.day_pass);
         Button groupPass = (Button) findViewById(R.id.group_pass);
         singlePass.setOnClickListener(new View.OnClickListener() {
