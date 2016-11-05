@@ -21,9 +21,14 @@ public class MainActivity extends Activity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         cityList = new ArrayList<>();
-        cityList.add("PeterBourogoh");
+        cityList.add("Calgary");
+        cityList.add("Chicago");
+        cityList.add("Peterborough");
+        cityList.add("San Francisco");
         cityList.add("Toronto");
-        cityList.add("Waterpo");
+        cityList.add("New York");
+        cityList.add("Vancouver");
+        cityList.add("Waterloo");
         mAdapter = new ArrayAdapter<String>(this, R.layout.city_listitem, cityList);
         ListView listView = (ListView) findViewById(R.id.city_list_view);
         listView.setAdapter(mAdapter);
