@@ -1,6 +1,7 @@
 package com.example.zy.echacks2016;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -29,7 +30,9 @@ public class MainActivity extends Activity{
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-
+                Intent intent = new Intent(view.getContext(), OrderBusTicketActivity.class);
+                intent.putExtra(Constants.CITY_NAME,cityList.get(i));
+                startActivity(intent);
             }
         });
     }
