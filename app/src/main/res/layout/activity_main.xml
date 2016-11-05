@@ -1,16 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#BAF6AE"
+    android:orientation="vertical"
+    android:background="@layout/background"
     tools:context="com.example.zy.echacks2016.MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Some Title"
+        android:textStyle="bold"
+        android:textSize="50dp"
+        android:textColor="#151515"
+        android:paddingBottom="55dp"
+        android:textAlignment="center"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@android:color/black"/>
 
     <ListView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="#403F3F"
+        android:dividerHeight="2px"
         android:id="@+id/city_list_view">
-
     </ListView>
-</FrameLayout>
+
+</LinearLayout>
