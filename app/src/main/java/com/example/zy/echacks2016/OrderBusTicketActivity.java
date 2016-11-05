@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.support.v4.content.LocalBroadcastManager;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 /**
@@ -18,6 +19,13 @@ import android.widget.TextView;
 public class OrderBusTicketActivity extends Activity {
     public ReceiveConfirmBroadcastReceiver receiver;
 
+<<<<<<< HEAD
+=======
+    public int[] mTransitLogo = {R.drawable.calgary, R.drawable.chicago, R.drawable.peterborough,
+                                    R.drawable.sf, R.drawable.ttc, R.drawable.nyc, R.drawable.vancouver,
+                                    R.drawable.grt};
+
+>>>>>>> master
     @Override
     protected void onStart() {
         super.onStart();
@@ -39,7 +47,8 @@ public class OrderBusTicketActivity extends Activity {
         receiver = new ReceiveConfirmBroadcastReceiver();
         TextView title = (TextView) findViewById(R.id.Title_Name);
         title.setText(intent.getStringExtra(Constants.CITY_NAME));
-
+        ImageView image = (ImageView) findViewById(R.id.transit_logo);
+        image.setImageResource(mTransitLogo[intent.getIntExtra(Constants.CITY_INDEX,-1)]);
         Button singlePass = (Button) findViewById(R.id.day_pass);
         Button groupPass = (Button) findViewById(R.id.group_pass);
         singlePass.setOnClickListener(new View.OnClickListener() {
