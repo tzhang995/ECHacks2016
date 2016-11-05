@@ -3,6 +3,8 @@ package com.example.zy.echacks2016;
 import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -24,6 +26,12 @@ public class MainActivity extends Activity{
         mAdapter = new ArrayAdapter<String>(this, R.layout.city_listitem, cityList);
         ListView listView = (ListView) findViewById(R.id.city_list_view);
         listView.setAdapter(mAdapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+            }
+        });
     }
 
 }
