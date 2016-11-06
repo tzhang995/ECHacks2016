@@ -7,6 +7,8 @@ We plan on enabling bluetooth in our app so that all you require is a simple tap
 
 With eStamps, millions of potential users will have a simple and efficient way of using the transit system, not only in Peterborough, but around the world. 
 
+Soon public transit systems will have the eStamps of approval
+
 # Setup
 Just Download the application and run it on your android device
 
