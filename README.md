@@ -1,4 +1,4 @@
-# ECHacks2016
+# Electric City Hacks 2016
 Our submission for Electric City Hackathon 2016 hosted by Major League Hacking
 
 Getting on the public transit system is an everyday affair that students, seniors, and workers all depend on across major cities in the world. One of the major flaws in public transit system is the transfer system. The transfer system enforces people to use paper receipts when getting off and on different buses and trains en route to their final destination. This is both a huge inconvenience to travellers and wastes massive amounts of paper which can pollutes the environment. 
@@ -8,7 +8,7 @@ Welcome to our modern transit solution, eStamps. The paperless, eco-friendly way
 Soon public transit systems will have the eStamps of approval
 
 # Demo
-
+![alt tag](https://raw.githubusercontent.com/tzhang995/ECHacks2016/app/src/main/res/drawable/phone.jpg)
 
 
 # Setup
