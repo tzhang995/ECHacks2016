@@ -17,33 +17,34 @@ import android.widget.TextView;
  */
 
 public class OrderBusTicketActivity extends Activity {
-    public ReceiveConfirmBroadcastReceiver receiver;
-
-    public int[] mTransitLogo = {R.drawable.calgary,R.drawable.calgary,R.drawable.calgary,R.drawable.calgary,R.drawable.calgary,R.drawable.calgary,R.drawable.calgary,R.drawable.calgary,R.drawable.calgary,R.drawable.calgary,R.drawable.calgary, R.drawable.chicago, R.drawable.peterborough,
-                                    R.drawable.sf, R.drawable.ttc, R.drawable.nyc, R.drawable.vancouver,
-                                    R.drawable.grt};
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-        LocalBroadcastManager.getInstance(this)
-                .registerReceiver(receiver, new IntentFilter(Constants.DIALOGKEY));
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        LocalBroadcastManager.getInstance(this).unregisterReceiver(receiver);
-    }
+    public String place;
+    public int[] mTransitLogo = {R.drawable.calgary,
+                                R.drawable.calgary,
+                                R.drawable.chicago,
+                                R.drawable.calgary,
+                                R.drawable.calgary,
+                                R.drawable.peterborough,
+                                R.drawable.calgary,
+                                R.drawable.calgary,
+                                R.drawable.calgary,
+                                R.drawable.calgary,
+                                R.drawable.calgary,
+                                R.drawable.sf,
+                                R.drawable.ttc,
+                                R.drawable.nyc,
+                                R.drawable.vancouver,
+                                R.drawable.nyc,
+                                R.drawable.grt,
+                                R.drawable.grt};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order_bus);
         Intent intent = getIntent();
-        receiver = new ReceiveConfirmBroadcastReceiver();
         TextView title = (TextView) findViewById(R.id.Title_Name);
-        title.setText(intent.getStringExtra(Constants.CITY_NAME));
+        place = intent.getStringExtra(Constants.CITY_NAME);
+        title.setText(place);
         ImageView image = (ImageView) findViewById(R.id.transit_logo);
         image.setImageResource(mTransitLogo[intent.getIntExtra(Constants.CITY_INDEX,-1)]);
         Button singlePass = (Button) findViewById(R.id.day_pass);
@@ -51,26 +52,18 @@ public class OrderBusTicketActivity extends Activity {
         singlePass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ConfirmDialogBox fragment = new ConfirmDialogBox();
-                fragment.show(getFragmentManager(), "string");
+                Intent newIntent = new Intent(view.getContext(), AcceptedPaymentActivity.class);
+                newIntent.putExtra(Constants.CITY_NAME,place);
+                startActivity(newIntent);
             }
         });
         groupPass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ConfirmDialogBox fragment = new ConfirmDialogBox();
-                fragment.show(getFragmentManager(), "string");
+                Intent newIntent = new Intent(view.getContext(), AcceptedPaymentActivity.class);
+                newIntent.putExtra(Constants.CITY_NAME,place);
+                startActivity(newIntent);
             }
         });
-    }
-
-
-    public class ReceiveConfirmBroadcastReceiver extends BroadcastReceiver{
-
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            Intent newIntent = new Intent(context, AcceptedPaymentActivity.class);
-            startActivity(newIntent);
-        }
     }
 }

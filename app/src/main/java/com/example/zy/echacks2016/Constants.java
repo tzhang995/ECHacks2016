@@ -1,5 +1,7 @@
 package com.example.zy.echacks2016;
 
+import com.google.android.gms.wallet.WalletConstants;
+
 /**
  * Created by Tony on 2016-11-05.
  */
@@ -7,7 +9,8 @@ package com.example.zy.echacks2016;
 public class Constants {
     public static String CITY_NAME = "CityName";
     public static String CITY_INDEX = "CityIndex";
-    public static String ZACH_APIKEY = "3FKhgE8DSfNX2fTx";
-    public static String ZACH_APISECRET = "ZpvkbipchxXJ0cGxxAcY5atZRTGomdyR";
     public static String DIALOGKEY = "DIALOGKEYNAME";
+    public static final int WALLET_ENVIRONMENT = WalletConstants.ENVIRONMENT_TEST;
+    public static final String MERCHANT_NAME = "TempName";
+    public static final String CURRENCY_CODE_CAD = "CAD";
 }
