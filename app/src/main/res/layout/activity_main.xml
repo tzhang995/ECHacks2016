@@ -11,7 +11,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Electric Ticket"
+        android:text="eStamps"
         android:background="#BCDEF8"
         android:textSize="45dp"
         android:fontFamily="roboto-light-italic"
@@ -25,6 +25,7 @@
         style="?android:attr/listSeparatorTextViewStyle"
         android:paddingTop="5dip"
         android:gravity="center_horizontal"
+        android:textAllCaps="false"
         android:layout_below="@+id/connect_help"
         />
     <View
