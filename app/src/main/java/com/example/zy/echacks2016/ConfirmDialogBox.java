@@ -25,7 +25,7 @@ public class ConfirmDialogBox extends DialogFragment {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 Intent intent = new Intent(Constants.DIALOGKEY);
-                LocalBroadcastManager.getInstance(getContext()).sendBroadcast(intent);
+                LocalBroadcastManager.getInstance(getActivity()).sendBroadcast(intent);
             }
         });
 
