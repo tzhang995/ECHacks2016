@@ -18,6 +18,7 @@ import android.widget.TextView;
 
 public class OrderBusTicketActivity extends Activity {
     public String place;
+    public int index;
     public int[] mTransitLogo = {R.drawable.calgary,
                                 R.drawable.calgary,
                                 R.drawable.chicago,
@@ -46,7 +47,8 @@ public class OrderBusTicketActivity extends Activity {
         place = intent.getStringExtra(Constants.CITY_NAME);
         title.setText(place);
         ImageView image = (ImageView) findViewById(R.id.transit_logo);
-        image.setImageResource(mTransitLogo[intent.getIntExtra(Constants.CITY_INDEX,-1)]);
+        index = intent.getIntExtra(Constants.CITY_INDEX,-1);
+        image.setImageResource(mTransitLogo[index]);
         Button singlePass = (Button) findViewById(R.id.day_pass);
         Button groupPass = (Button) findViewById(R.id.group_pass);
         singlePass.setOnClickListener(new View.OnClickListener() {
@@ -54,6 +56,7 @@ public class OrderBusTicketActivity extends Activity {
             public void onClick(View view) {
                 Intent newIntent = new Intent(view.getContext(), AcceptedPaymentActivity.class);
                 newIntent.putExtra(Constants.CITY_NAME,place);
+                newIntent.putExtra(Constants.CITY_INDEX, index);
                 startActivity(newIntent);
             }
         });
@@ -62,6 +65,7 @@ public class OrderBusTicketActivity extends Activity {
             public void onClick(View view) {
                 Intent newIntent = new Intent(view.getContext(), AcceptedPaymentActivity.class);
                 newIntent.putExtra(Constants.CITY_NAME,place);
+                newIntent.putExtra(Constants.CITY_INDEX, index);
                 startActivity(newIntent);
             }
         });

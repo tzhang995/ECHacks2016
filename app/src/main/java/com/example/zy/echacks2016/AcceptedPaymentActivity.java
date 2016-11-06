@@ -40,6 +40,7 @@ public class AcceptedPaymentActivity extends FragmentActivity implements GoogleA
         GoogleApiClient.OnConnectionFailedListener{
     public ReceiveConfirmBroadcastReceiver receiver;
     public String place;
+    public int index;
     public ArrayAdapter<String> mAdapter;
     public ArrayList<String> paymentList;
 
@@ -103,6 +104,7 @@ public class AcceptedPaymentActivity extends FragmentActivity implements GoogleA
         setContentView(R.layout.activity_accept_payment);
         Intent intent = getIntent();
         place = intent.getStringExtra(Constants.CITY_NAME);
+        index = intent.getIntExtra(Constants.CITY_INDEX, -1);
         ListView listView = (ListView) findViewById(R.id.payment_list);
         paymentList = new ArrayList<>();
         paymentList.add("Pay with Visa");
@@ -255,6 +257,7 @@ public class AcceptedPaymentActivity extends FragmentActivity implements GoogleA
         public void onReceive(Context context, Intent intent) {
             Intent newIntent = new Intent(context,ProofOfPaymentActivity.class);
             newIntent.putExtra(Constants.CITY_NAME, place);
+            newIntent.putExtra(Constants.CITY_INDEX, index);
             startActivity(newIntent);
         }
     }
