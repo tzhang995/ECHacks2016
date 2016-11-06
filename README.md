@@ -9,4 +9,5 @@ By using our application, millions of potential users will have a simple and eff
 
 # Setup
 Just Download the application and run it on your android device
+
 Note: Some functions of the application does not work with devices lower than Marshmellow (6.0)
