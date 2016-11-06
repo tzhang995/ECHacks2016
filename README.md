@@ -8,8 +8,11 @@ Welcome to our modern transit solution, eStamps. The paperless, eco-friendly way
 Soon public transit systems will have the eStamps of approval
 
 # Demo
-![alt tag](https://github.com/tzhang995/ECHacks2016/blob/master/app/src/main/res/drawable/phone.jpg)
-
+![alt tag](https://github.com/tzhang995/ECHacks2016/blob/master/app/src/main/res/drawable/1.jpg)
+![alt_tag](https://github.com/tzhang995/ECHacks2016/blob/master/app/src/main/res/drawable/2.jpg)
+![alt_tag](https://github.com/tzhang995/ECHacks2016/blob/master/app/src/main/res/drawable/3.jpg)
+![alt_tag](https://github.com/tzhang995/ECHacks2016/blob/master/app/src/main/res/drawable/4.jpg)
+![alt_tag](https://github.com/tzhang995/ECHacks2016/blob/master/app/src/main/res/drawable/5.jpg)
 # Setup
 Just Download the application and run it on your android device
 
